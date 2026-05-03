@@ -490,7 +490,7 @@ function TopNav({ lang, setLang, t, setPage }) {
       <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 md:flex-row md:items-center md:justify-between">
         <button onClick={() => setPage("home")} className="flex items-center gap-3 text-left">
           <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-700 text-2xl text-white shadow-lg">♻️</div>
-          <div><p className="text-xl font-black tracking-tight text-slate-950">Packwise RTE</p><p className="text-xs font-medium text-slate-500">{t.subtitle}</p></div>
+          <div><p className="text-xl font-black tracking-tight text-slate-950">PackitWise RTE</p><p className="text-xs font-medium text-slate-500">{t.subtitle}</p></div>
         </button>
         <div className="flex flex-wrap items-center gap-3 md:justify-end">
           <div className="hidden items-center gap-5 text-sm font-semibold text-slate-700 lg:flex">
@@ -523,7 +523,7 @@ function HomePage({ lang, t, openCategory }) {
           </div>
           <div className="rounded-[2.5rem] border border-white bg-white/80 p-5 shadow-2xl shadow-slate-900/10">
             <div className="rounded-[2rem] bg-gradient-to-br from-emerald-700 to-emerald-950 p-6 text-white">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-100">Packwise method</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-100">PackitWise method</p>
               <h2 className="mt-2 text-2xl font-black">Category → Item → Detailed guide</h2>
               <div className="mt-6 grid gap-3">
                 {categoryKeys.slice(0, 4).map((key) => <div key={key} className="rounded-2xl bg-white/12 p-4 ring-1 ring-white/15"><span className="mr-2 text-2xl">{categoryMeta[key].icon}</span>{categoryMeta[key].name[lang]}</div>)}
@@ -636,7 +636,7 @@ function GameSection({ t }) {
   return <section id="game" className="bg-emerald-950 px-5 py-16 text-white"><div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center"><div><h2 className="text-3xl font-black tracking-tight md:text-5xl">{t.gameHeading}</h2><a href="https://packitwise.vercel.app" target="_blank" rel="noreferrer" className="mt-7 inline-flex rounded-2xl bg-white px-6 py-4 font-bold text-emerald-950 shadow-xl hover:bg-emerald-50">PackitWise Game ↗</a></div><div className="rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur"><p className="mb-3 font-bold text-white">{t.beforeAfter}</p><div className="grid gap-3 sm:grid-cols-2"><label><span className="mb-1 block text-sm text-emerald-100">{t.beforeScore}</span><input type="number" min="0" value={beforeScore} onChange={(e) => setBeforeScore(e.target.value)} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 6" /></label><label><span className="mb-1 block text-sm text-emerald-100">{t.afterScore}</span><input type="number" min="0" value={afterScore} onChange={(e) => setAfterScore(e.target.value)} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 9" /></label></div>{hasResult && <div className="mt-4 rounded-2xl bg-orange-300/15 p-4 text-sm leading-6 text-orange-50 ring-1 ring-orange-200/20">{t.scoreChange}: <strong>{diff >= 0 ? "+" : ""}{diff}</strong>{before > 0 && <span> ({pct >= 0 ? "+" : ""}{pct}% {t.compared})</span>}.</div>}</div></div></section>;
 }
 
-export default function PackwiseRTEWebsite() {
+export default function PackitWiseRTEWebsite() {
   const [lang, setLang] = useState("en");
   const [page, setPage] = useState("home");
   const [category, setCategory] = useState("beverage");
@@ -654,7 +654,7 @@ export default function PackwiseRTEWebsite() {
       <RecyclingSection lang={lang} t={t} />
       <GameSection t={t} />
       <section className="px-5 py-16"><div className="mx-auto max-w-7xl rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm md:p-10"><h2 className="text-3xl font-black text-slate-950">{t.aboutTitle}</h2><p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">{t.aboutText}</p></div></section>
-      <footer className="border-t border-slate-200 px-5 py-8"><div className="mx-auto max-w-7xl text-sm text-slate-500">© Packwise RTE Capstone Project</div></footer>
+      <footer className="border-t border-slate-200 px-5 py-8"><div className="mx-auto max-w-7xl text-sm text-slate-500">© PackitWise RTE Capstone Project</div></footer>
     </main>
   );
 }
