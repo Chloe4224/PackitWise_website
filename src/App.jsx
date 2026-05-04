@@ -625,15 +625,38 @@ function InfoBlock({ label, value }) {
   return <div className="rounded-2xl bg-slate-50 p-4"><p className="font-bold text-slate-950">{label}</p><p className="mt-1 leading-6 text-slate-700">{value}</p></div>;
 }
 
+//Game Section
 function GameSection({ t }) {
   const [beforeScore, setBeforeScore] = useState("");
   const [afterScore, setAfterScore] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
   const before = Number(beforeScore);
   const after = Number(afterScore);
-  const hasResult = beforeScore !== "" && afterScore !== "" && !Number.isNaN(before) && !Number.isNaN(after);
+  const hasResult =
+    beforeScore !== "" &&
+    afterScore !== "" &&
+    !Number.isNaN(before) &&
+    !Number.isNaN(after);
+
   const diff = hasResult ? after - before : 0;
   const pct = hasResult && before > 0 ? Math.round((diff / before) * 100) : 0;
-  return <section id="game" className="bg-emerald-950 px-5 py-16 text-white"><div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center"><div><h2 className="text-3xl font-black tracking-tight md:text-5xl">{t.gameHeading}</h2><a href="https://packitwise.vercel.app" target="_blank" rel="noreferrer" className="mt-7 inline-flex rounded-2xl bg-white px-6 py-4 font-bold text-emerald-950 shadow-xl hover:bg-emerald-50">PackitWise Game ↗</a></div><div className="rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur"><p className="mb-3 font-bold text-white">{t.beforeAfter}</p><div className="grid gap-3 sm:grid-cols-2"><label><span className="mb-1 block text-sm text-emerald-100">{t.beforeScore}</span><input type="number" min="0" value={beforeScore} onChange={(e) => setBeforeScore(e.target.value)} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 6" /></label><label><span className="mb-1 block text-sm text-emerald-100">{t.afterScore}</span><input type="number" min="0" value={afterScore} onChange={(e) => setAfterScore(e.target.value)} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 9" /></label></div>{hasResult && <div className="mt-4 rounded-2xl bg-orange-300/15 p-4 text-sm leading-6 text-orange-50 ring-1 ring-orange-200/20">{t.scoreChange}: <strong>{diff >= 0 ? "+" : ""}{diff}</strong>{before > 0 && <span> ({pct >= 0 ? "+" : ""}{pct}% {t.compared})</span>}.</div>}</div></div></section>;
+
+  const submitScoreToGA4 = () => {
+    if (!hasResult) return;
+
+    window.gtag?.("event", "main_score_submit", {
+      before_score: before,
+      after_score: after,
+      score_improvement: diff,
+      score_improvement_percent: pct,
+      score_change_type: diff > 0 ? "improved" : diff === 0 ? "no_change" : "decreased",
+      source_section: "main_website_game_score_form",
+    });
+
+    setSubmitted(true);
+  };
+    return <section id="game" className="bg-emerald-950 px-5 py-16 text-white"><div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center"><div><h2 className="text-3xl font-black tracking-tight md:text-5xl">{t.gameHeading}</h2><a href="https://packitwise.vercel.app" target="_blank" rel="noreferrer" onClick={() => { window.gtag?.("event", "main_game_link_click", { event_category: "engagement", event_label: "main_website_game_button", source_section: "main_website_game_section" }); }} className="mt-7 inline-flex rounded-2xl bg-white px-6 py-4 font-bold text-emerald-950 shadow-xl hover:bg-emerald-50">PackitWise Game ↗</a></div><div className="rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur"><p className="mb-3 font-bold text-white">{t.beforeAfter}</p><div className="grid gap-3 sm:grid-cols-2"><label><span className="mb-1 block text-sm text-emerald-100">{t.beforeScore}</span><input type="number" min="0" value={beforeScore} onChange={(e) => { setBeforeScore(e.target.value); setSubmitted(false); }} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 6" /></label><label><span className="mb-1 block text-sm text-emerald-100">{t.afterScore}</span><input type="number" min="0" value={afterScore} onChange={(e) => { setAfterScore(e.target.value); setSubmitted(false); }} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 9" /></label></div>{hasResult && <div className="mt-4 rounded-2xl bg-orange-300/15 p-4 text-sm leading-6 text-orange-50 ring-1 ring-orange-200/20">{t.scoreChange}: <strong>{diff >= 0 ? "+" : ""}{diff}</strong>{before > 0 && <span> ({pct >= 0 ? "+" : ""}{pct}% {t.compared})</span>}.</div>}<button type="button" onClick={submitScoreToGA4} disabled={!hasResult} className="mt-4 rounded-2xl bg-orange-300 px-5 py-3 font-bold text-emerald-950 shadow-lg hover:bg-orange-200 disabled:cursor-not-allowed disabled:opacity-50">Submit score data</button>{submitted && <p className="mt-3 text-sm text-emerald-100">Score data submitted. Thank you!</p>}</div></div></section>;
 }
 
 export default function PackitWiseRTEWebsite() {
