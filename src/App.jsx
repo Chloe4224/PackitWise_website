@@ -61,8 +61,8 @@ const ui = {
     afterScore: "After score",
     scoreChange: "Score change",
     compared: "compared with the first attempt",
-    aboutTitle: "Capstone framing",
-    aboutText: "PackitWise RTE focuses on the sustainability and recyclability of ready-to-eat food packaging in Hong Kong. The guide can be expanded with your field photos, questionnaire findings and verified local recycling references.",
+    aboutTitle: "About this capstone project",
+    aboutText: "PackitWise RTE is a capstone project developed by students from the MSc Environmental Management programme at The University of Hong Kong. Through this website and the learning game, we aim to improve public understanding of ready-to-eat food packaging in Hong Kong, including common materials, recycling challenges and better disposal practices.",
     noResults: "No matching items found.",
   },
   zhCN: {
@@ -116,8 +116,8 @@ const ui = {
     afterScore: "学习后分数",
     scoreChange: "分数变化",
     compared: "相比第一次尝试",
-    aboutTitle: "Capstone 项目定位",
-    aboutText: "PackitWise RTE 关注香港即食食品包装的可持续性和可回收性。后续可以加入你们的实地照片、问卷结果和经过核实的本地回收资料。",
+    aboutTitle: "关于本 Capstone 项目",
+    aboutText: "PackitWise RTE 是由香港大学 MSc Environmental Management 课程学生开发的 Capstone 项目。我们希望通过这个网站和互动小游戏，提升公众对香港即食食品包装的认知，包括常见包装材料、回收难点以及更合适的处理方式。",
     noResults: "没有找到匹配的包装项目。",
   },
   zhHK: {
@@ -171,8 +171,8 @@ const ui = {
     afterScore: "學習後分數",
     scoreChange: "分數變化",
     compared: "相比第一次嘗試",
-    aboutTitle: "Capstone 項目定位",
-    aboutText: "PackitWise RTE 關注香港即食食品包裝的可持續性及可回收性。後續可加入你們的實地照片、問卷結果及經核實的本地回收資料。",
+    aboutTitle: "關於本 Capstone 項目",
+    aboutText: "PackitWise RTE 是由香港大學 MSc Environmental Management 課程學生開發的 Capstone 項目。我們希望透過這個網站和互動小遊戲，提升公眾對香港即食食品包裝的認知，包括常見包裝材料、回收難點以及更合適的處理方式。",
     noResults: "沒有找到匹配的包裝項目。",
   },
 };
