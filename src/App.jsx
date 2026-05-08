@@ -61,6 +61,9 @@ const ui = {
     afterScore: "After score",
     scoreChange: "Score change",
     compared: "compared with the first attempt",
+    scoreNotice: "Submitted scores will be stored anonymously and used only for this HKU MSc Environmental Management capstone project evaluation.",
+    submitScore: "Submit score data",
+    scoreSubmitted: "Score data submitted. Thank you!",
     aboutTitle: "About this capstone project",
     aboutText: "PackitWise RTE is a capstone project developed by students from the MSc Environmental Management programme at The University of Hong Kong. Through this website and the learning game, we aim to improve public understanding of ready-to-eat food packaging in Hong Kong, including common materials, recycling challenges and better disposal practices.",
     noResults: "No matching items found.",
@@ -116,6 +119,9 @@ const ui = {
     afterScore: "学习后分数",
     scoreChange: "分数变化",
     compared: "相比第一次尝试",
+    scoreNotice: "提交的分数将以匿名形式储存，并仅用于本香港大学 MSc Environmental Management Capstone 项目的评估。",
+    submitScore: "提交分数数据",
+    scoreSubmitted: "分数数据已提交，谢谢！",
     aboutTitle: "关于本 Capstone 项目",
     aboutText: "PackitWise RTE 是由香港大学 MSc Environmental Management 课程学生开发的 Capstone 项目。我们希望通过这个网站和互动小游戏，提升公众对香港即食食品包装的认知，包括常见包装材料、回收难点以及更合适的处理方式。",
     noResults: "没有找到匹配的包装项目。",
@@ -171,6 +177,9 @@ const ui = {
     afterScore: "學習後分數",
     scoreChange: "分數變化",
     compared: "相比第一次嘗試",
+    scoreNotice: "提交的分數將以匿名形式儲存，並只用於本香港大學 MSc Environmental Management Capstone 項目的評估。",
+    submitScore: "提交分數數據",
+    scoreSubmitted: "分數數據已提交，謝謝！",
     aboutTitle: "關於本 Capstone 項目",
     aboutText: "PackitWise RTE 是由香港大學 MSc Environmental Management 課程學生開發的 Capstone 項目。我們希望透過這個網站和互動小遊戲，提升公眾對香港即食食品包裝的認知，包括常見包裝材料、回收難點以及更合適的處理方式。",
     noResults: "沒有找到匹配的包裝項目。",
@@ -678,9 +687,110 @@ const submitScoreToGA4 = async () => {
     setSubmitted(true);
   }
 };
-    return <section id="game" className="bg-emerald-950 px-5 py-16 text-white"><div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center"><div><h2 className="text-3xl font-black tracking-tight md:text-5xl">{t.gameHeading}</h2><a href="https://packitwise.vercel.app" target="_blank" rel="noreferrer" onClick={() => { window.gtag?.("event", "main_game_link_click", { event_category: "engagement", event_label: "main_website_game_button", source_section: "main_website_game_section" }); }} className="mt-7 inline-flex rounded-2xl bg-white px-6 py-4 font-bold text-emerald-950 shadow-xl hover:bg-emerald-50">PackitWise Game ↗</a></div><div className="rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur"><p className="mb-3 font-bold text-white">{t.beforeAfter}</p><div className="grid gap-3 sm:grid-cols-2"><label><span className="mb-1 block text-sm text-emerald-100">{t.beforeScore}</span><input type="number" min="0" value={beforeScore} onChange={(e) => { setBeforeScore(e.target.value); setSubmitted(false); }} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 6" /></label><label><span className="mb-1 block text-sm text-emerald-100">{t.afterScore}</span><input type="number" min="0" value={afterScore} onChange={(e) => { setAfterScore(e.target.value); setSubmitted(false); }} className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none" placeholder="e.g. 9" /></label></div>{hasResult && <div className="mt-4 rounded-2xl bg-orange-300/15 p-4 text-sm leading-6 text-orange-50 ring-1 ring-orange-200/20">{t.scoreChange}: <strong>{diff >= 0 ? "+" : ""}{diff}</strong>{before > 0 && <span> ({pct >= 0 ? "+" : ""}{pct}% {t.compared})</span>}.</div>}<button type="button" onClick={submitScoreToGA4} disabled={!hasResult} className="mt-4 rounded-2xl bg-orange-300 px-5 py-3 font-bold text-emerald-950 shadow-lg hover:bg-orange-200 disabled:cursor-not-allowed disabled:opacity-50">Submit score data</button><p className="mt-2 text-xs leading-5 text-emerald-100/80">
-  Submitted scores will be stored anonymously and used only for this HKU MSc Environmental Management capstone project evaluation.
-</p>{submitted && <p className="mt-3 text-sm text-emerald-100">Score data submitted. Thank you!</p>}</div></div></section>;
+return (
+  <section id="game" className="bg-emerald-950 px-5 py-16 text-white">
+    <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+      <div>
+        <h2 className="text-3xl font-black tracking-tight md:text-5xl">
+          {t.gameHeading}
+        </h2>
+
+        <a
+          href="https://packitwise.vercel.app"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => {
+            window.gtag?.("event", "main_game_link_click", {
+              event_category: "engagement",
+              event_label: "main_website_game_button",
+              source_section: "main_website_game_section",
+            });
+          }}
+          className="mt-7 inline-flex rounded-2xl bg-white px-6 py-4 font-bold text-emerald-950 shadow-xl hover:bg-emerald-50"
+        >
+          PackitWise Game ↗
+        </a>
+      </div>
+
+      <div className="rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur">
+        <p className="mb-3 font-bold text-white">{t.beforeAfter}</p>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          <label>
+            <span className="mb-1 block text-sm text-emerald-100">
+              {t.beforeScore}
+            </span>
+            <input
+              type="number"
+              min="0"
+              value={beforeScore}
+              onChange={(e) => {
+                setBeforeScore(e.target.value);
+                setSubmitted(false);
+              }}
+              className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none"
+              placeholder="e.g. 6"
+            />
+          </label>
+
+          <label>
+            <span className="mb-1 block text-sm text-emerald-100">
+              {t.afterScore}
+            </span>
+            <input
+              type="number"
+              min="0"
+              value={afterScore}
+              onChange={(e) => {
+                setAfterScore(e.target.value);
+                setSubmitted(false);
+              }}
+              className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-slate-950 outline-none"
+              placeholder="e.g. 9"
+            />
+          </label>
+        </div>
+
+        {hasResult && (
+          <div className="mt-4 rounded-2xl bg-orange-300/15 p-4 text-sm leading-6 text-orange-50 ring-1 ring-orange-200/20">
+            {t.scoreChange}:{" "}
+            <strong>
+              {diff >= 0 ? "+" : ""}
+              {diff}
+            </strong>
+            {before > 0 && (
+              <span>
+                {" "}
+                ({pct >= 0 ? "+" : ""}
+                {pct}% {t.compared})
+              </span>
+            )}
+            .
+          </div>
+        )}
+
+        <button
+          type="button"
+          onClick={submitScoreToGA4}
+          disabled={!hasResult}
+          className="mt-4 rounded-2xl bg-orange-300 px-5 py-3 font-bold text-emerald-950 shadow-lg hover:bg-orange-200 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {t.submitScore}
+        </button>
+
+        <p className="mt-2 text-xs leading-5 text-emerald-100/80">
+          {t.scoreNotice}
+        </p>
+
+        {submitted && (
+          <p className="mt-3 text-sm text-emerald-100">
+            {t.scoreSubmitted}
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+);
 }
 
 export default function PackitWiseRTEWebsite() {
