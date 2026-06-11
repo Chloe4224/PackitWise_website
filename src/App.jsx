@@ -295,7 +295,10 @@ const itemData = [
     answer: "general",
     image: "/images/coffee.png",
     name: { en: "Takeaway Coffee Cup", zhCN: "外带咖啡杯", zhHK: "外賣咖啡杯" },
-    explanation: { en: "Many takeaway coffee cups contain plastic lining and drink residue, so they are difficult to recycle.", zhCN: "很多外带咖啡杯含塑料内层，也容易有饮品残留，因此较难回收。", zhHK: "很多外賣咖啡杯含塑膠內層，也容易有飲品殘留，因此較難回收。" }
+    explanation: { 
+      en: "Takeaway coffee cups are usually not recyclable because they often contain plastic lining and drink residue. Please dispose of them as general waste.", 
+      zhCN: "外带咖啡杯通常含有塑料内层，并容易有饮品残留，一般不可回收，请丢入一般垃圾。", 
+      zhHK: "外賣咖啡杯通常含有塑膠內層，並容易有飲品殘留，一般不可回收，請丟入一般垃圾。" }
   },
   {
     id: 4,
@@ -304,7 +307,10 @@ const itemData = [
     answer: "general",
     image: "/images/bubbletea.jpg",
     name: { en: "Bubble Tea Cup", zhCN: "奶茶杯", zhHK: "奶茶杯" },
-    explanation: { en: "The cup, sealing film, straw and drink residue can make recycling difficult unless separated and cleaned properly.", zhCN: "杯身、封膜、吸管和饮品残留会增加回收难度，除非正确分开并清洗。", zhHK: "杯身、封膜、飲管和飲品殘留會增加回收難度，除非正確分開並清洗。" }
+    explanation: { 
+      en: "Bubble tea cups are usually not recyclable because of drink residue, sealing film, straws and mixed small components. Please dispose of them as general waste.", 
+      zhCN: "奶茶杯通常因饮品残留、封膜、吸管及混合小部件而不可回收，请丢入一般垃圾。", 
+      zhHK: "奶茶杯通常因飲品殘留、封膜、飲管及混合小部件而不可回收，請丟入一般垃圾。" }
   },
   {
     id: 5,
@@ -331,7 +337,10 @@ const itemData = [
     answer: "general",
     image: "/images/saladbag.webp",
     name: { en: "Salad Packaging", zhCN: "沙拉包装", zhHK: "沙律包裝" },
-    explanation: { en: "Salad packaging may include a plastic bowl, lid, sticker and sealing film, which makes separation important.", zhCN: "沙拉包装可能包含塑料碗、盖子、贴纸和封膜，因此需要分开处理。", zhHK: "沙律包裝可能包含塑膠碗、蓋、貼紙和封膜，因此需要分開處理。" }
+    explanation: { 
+      en: "Salad packaging often contains food residue, labels, lids and mixed plastic parts, so it is usually not recyclable. Please dispose of it as general waste.", 
+      zhCN: "沙拉包装常有食物残留、标签、盖子及混合塑料部件，通常不可回收，请丢入一般垃圾。", 
+      zhHK: "沙律包裝常有食物殘留、標籤、蓋及混合塑膠部件，通常不可回收，請丟入一般垃圾。" }
   },
   {
     id: 8,
@@ -340,7 +349,10 @@ const itemData = [
     answer: "general",
     image: "/images/instantnoodles.png",
     name: { en: "Instant Noodle Bowl", zhCN: "泡面碗", zhHK: "即食麵碗" },
-    explanation: { en: "Instant noodle bowls are often contaminated with soup, oil and food residue, so they usually go to general waste.", zhCN: "泡面碗通常有汤、油和食物残留，因此一般作为普通垃圾处理。", zhHK: "即食麵碗通常有湯、油和食物殘留，因此一般作為普通垃圾處理。" }
+    explanation: { 
+      en: "Instant noodle bowls are usually contaminated with soup, oil and food residue, so they are not suitable for recycling. Please dispose of them as general waste.", 
+      zhCN: "泡面碗通常有汤、油和食物残留，不适合回收，请丢入一般垃圾。", 
+      zhHK: "即食麵碗通常有湯、油和食物殘留，不適合回收，請丟入一般垃圾。" }
   },
   {
     id: 9,
@@ -349,7 +361,11 @@ const itemData = [
     answer: "general",
     image: "/images/bread.png",
     name: { en: "Bread Packaging", zhCN: "面包包装", zhHK: "麵包包裝" },
-    explanation: { en: "Bread packaging is often soft plastic film or paper-plastic composite material, which is difficult to recycle.", zhCN: "面包包装常见为软塑料薄膜或纸塑复合材料，较难回收。", zhHK: "麵包包裝常見為軟塑膠薄膜或紙塑複合材料，較難回收。" }
+    explanation: { 
+      en: "Bread packaging is usually soft plastic film or paper-plastic composite material, so it is not recyclable through normal recycling channels.", 
+      zhCN: "面包包装通常是软塑料薄膜或纸塑复合材料，不能通过普通回收渠道回收。", 
+      zhHK: "麵包包裝通常是軟塑膠薄膜或紙塑複合材料，不能透過普通回收渠道回收。" 
+    }
   },
   {
     id: 10,
@@ -376,7 +392,11 @@ const itemData = [
     answer: "general",
     image: "/images/ketchup.png",
     name: { en: "Ketchup Sachet", zhCN: "番茄酱小包装", zhHK: "茄汁小包裝" },
-    explanation: { en: "Small sauce sachets are usually multi-layer soft packaging and are not suitable for normal recycling.", zhCN: "小酱料包装通常是多层软包装，不适合普通回收。", zhHK: "小醬料包裝通常是多層軟包裝，不適合普通回收。" }
+    explanation: { 
+      en: "Ketchup sachets are small multi-layer soft packaging and are not recyclable. Please dispose of them as general waste.", 
+      zhCN: "番茄酱小包装属于小型多层软包装，不可回收，请丢入一般垃圾。", 
+      zhHK: "茄汁小包裝屬於小型多層軟包裝，不可回收，請丟入一般垃圾。" 
+    }
   },
   {
     id: 13,
@@ -407,12 +427,12 @@ const itemData = [
   },
   {
     id: 16,
-    category: "accessories",
+    category: "beverage",
     icon: "🥛",
-    answer: "general",
+    answer: "recyclable",
     image: "/images/milkbox_lid.png",
-    name: { en: "Milk Box Lid", zhCN: "牛奶盒盖", zhHK: "牛奶盒蓋" },
-    explanation: { en: "Small caps or lids should be separated where possible, but their small size can reduce recycling efficiency.", zhCN: "小盖子可尽量分开处理，但体积小会降低回收效率。", zhHK: "小蓋子可盡量分開處理，但體積小會降低回收效率。" }
+    name: { en: "Beverage / Milk cartons", zhCN: "饮料盒/牛奶盒", zhHK: "飲品盒/牛奶盒" },
+    explanation: { en: "Beverage and milk cartons can be recycled if straws and plastic wrappings are removed, and the carton is rinsed, dried and flattened.", zhCN: "饮料盒和牛奶盒在移除吸管及塑料包装、清洗、晾干并压平后可以回收。", zhHK: "飲品盒和牛奶盒在移除飲管及塑膠包裝、清洗、晾乾並壓平後可以回收。" }
   },
   {
     id: 17,
@@ -430,7 +450,11 @@ const itemData = [
     answer: "general",
     image: "/images/tableware.png",
     name: { en: "Disposable Tableware", zhCN: "一次性餐具", zhHK: "即棄餐具" },
-    explanation: { en: "Disposable tableware is often contaminated after use and may be made from low-value or mixed materials.", zhCN: "一次性餐具使用后容易被污染，也可能是低价值或混合材料。", zhHK: "即棄餐具使用後容易被污染，也可能是低價值或混合材料。" }
+    explanation: { 
+      en: "Disposable tableware is usually contaminated after use and has low recycling value, so it is not recyclable in normal practice. Please dispose of it as general waste.", 
+      zhCN: "一次性餐具使用后通常受到污染，回收价值低，日常情况下不可回收，请丢入一般垃圾。", 
+      zhHK: "即棄餐具使用後通常受到污染，回收價值低，日常情況下不可回收，請丟入一般垃圾。" 
+    }
   }
 ];
 
@@ -480,9 +504,17 @@ const recyclingPoints = [
 ];
 
 function getScore(item) {
-  if (item.answer === "recyclable") return item.id === 2 ? 5 : 4;
-  if ([15, 16, 18, 19, 20, 24].includes(item.id)) return 1;
-  return 2;
+  // 不可回收物全部统一 1/5
+  if (item.answer === "general") return 1;
+
+  // 铝罐回收价值最高
+  if (item.id === 2) return 5;
+
+  // 饮料盒 / 牛奶盒设为 4/5
+  if (item.id === 16) return 4;
+
+  // 其他可回收物默认 4/5
+  return 4;
 }
 
 function getDetail(item, lang) {
@@ -558,18 +590,59 @@ function getDetail(item, lang) {
 }
 
 function getSteps(item, lang) {
-  if (item.answer === "recyclable") {
+  if (item.id === 16) {
     return {
-      en: ["Empty remaining contents", "Rinse if needed", "Separate removable labels, lids or caps", "Dry the item", "Place in an accepted recycling point"],
-      zhCN: ["清空内容物", "需要时简单冲洗", "分离可移除的标签、盖子或瓶盖", "沥干水分", "投放到可接收的回收点"],
-      zhHK: ["清空內容物", "需要時簡單沖洗", "分離可移除的標籤、蓋或樽蓋", "瀝乾水分", "投放到可接收的回收點"],
+      en: [
+        "Remove straws and plastic wrappings",
+        "Cut a corner",
+        "Rinse and dry",
+        "Flatten the carton",
+        "Place it in an accepted recycling point"
+      ],
+      zhCN: [
+        "移除吸管和塑料包装",
+        "剪开一个角",
+        "清洗并晾干",
+        "压平饮料盒",
+        "投放到可接收的回收点"
+      ],
+      zhHK: [
+        "移除飲管和塑膠包裝",
+        "剪開一個角",
+        "清洗並晾乾",
+        "壓平飲品盒",
+        "投放到可接收的回收點"
+      ],
     }[lang];
   }
-  return {
-    en: ["Remove food residue where possible", "Check whether clean parts can be separated", "Do not mix dirty parts with clean recyclables", "Dispose non-separable or contaminated parts as general waste"],
-    zhCN: ["尽量去除食物残留", "检查是否有干净部件可以分离", "不要把脏污部件混入干净回收物", "无法分离或受污染部件按一般垃圾处理"],
-    zhHK: ["盡量去除食物殘留", "檢查是否有乾淨部件可以分離", "不要把污糟部件混入乾淨回收物", "無法分離或受污染部件按一般垃圾處理"],
-  }[lang];
+
+  if (item.answer === "recyclable") {
+    return {
+      en: [
+        "Empty remaining contents",
+        "Rinse if needed",
+        "Separate removable labels, lids or caps",
+        "Dry the item",
+        "Place in an accepted recycling point"
+      ],
+      zhCN: [
+        "清空内容物",
+        "需要时简单冲洗",
+        "分离可移除的标签、盖子或瓶盖",
+        "沥干水分",
+        "投放到可接收的回收点"
+      ],
+      zhHK: [
+        "清空內容物",
+        "需要時簡單沖洗",
+        "分離可移除的標籤、蓋或樽蓋",
+        "瀝乾水分",
+        "投放到可接收的回收點"
+      ],
+    }[lang];
+  }
+
+  return [];
 }
 
 function ScoreDots({ score }) {
@@ -726,17 +799,68 @@ function DetailPage({ lang, t, item, goCategory }) {
           </div>
         </div>
 
-        <GuideSection title={t.materialBreakdown}>
-          <div className="grid gap-4 md:grid-cols-2">
-            {detail.materials.map((part, index) => <div key={index} className="rounded-3xl bg-slate-50 p-5"><div className="mb-2 flex flex-wrap items-center gap-3"><h3 className="text-lg font-black text-slate-950">{part.part[lang]}</h3><span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700">{typeof part.material === "string" ? part.material : part.material[lang]}</span><span className={part.recyclable ? "font-bold text-emerald-700" : "font-bold text-red-500"}>{part.recyclable ? `✓ ${t.accepted}` : `× ${t.notAccepted}`}</span></div><p className="text-sm leading-6 text-slate-600">{part.note[lang]}</p></div>)}
+        {isRecyclable && (
+  <>
+    <GuideSection title={t.materialBreakdown}>
+      <div className="grid gap-4 md:grid-cols-2">
+        {detail.materials.map((part, index) => (
+          <div key={index} className="rounded-3xl bg-slate-50 p-5">
+            <div className="mb-2 flex flex-wrap items-center gap-3">
+              <h3 className="text-lg font-black text-slate-950">{part.part[lang]}</h3>
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-700">
+                {typeof part.material === "string" ? part.material : part.material[lang]}
+              </span>
+              <span className={part.recyclable ? "font-bold text-emerald-700" : "font-bold text-red-500"}>
+                {part.recyclable ? `✓ ${t.accepted}` : `× ${t.notAccepted}`}
+              </span>
+            </div>
+            <p className="text-sm leading-6 text-slate-600">{part.note[lang]}</p>
           </div>
-        </GuideSection>
+        ))}
+      </div>
+    </GuideSection>
+
+    <GuideSection title={t.cleaningMethod}>
+      <p className="text-lg leading-8 text-slate-600">{detail.cleaning}</p>
+    </GuideSection>
+  </>
+)}
 
         <GuideSection title={t.cleaningMethod}><p className="text-lg leading-8 text-slate-600">{detail.cleaning}</p></GuideSection>
 
-        <GuideSection title={t.recyclingSteps}>
-          <div className="space-y-4">{steps.map((step, index) => <div key={step} className="flex gap-4"><div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-lg font-black text-white">{index + 1}</div><div><p className="text-lg font-black text-slate-950">{step}</p><span className="mt-1 inline-flex rounded-lg bg-red-100 px-2 py-1 text-xs font-bold text-red-700">{t.mustDo}</span></div></div>)}</div>
-        </GuideSection>
+        {isRecyclable ? (
+  <GuideSection title={t.recyclingSteps}>
+    <div className="space-y-4">
+      {steps.map((step, index) => (
+        <div key={step} className="flex gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-lg font-black text-white">
+            {index + 1}
+          </div>
+          <div>
+            <p className="text-lg font-black text-slate-950">{step}</p>
+            <span className="mt-1 inline-flex rounded-lg bg-red-100 px-2 py-1 text-xs font-bold text-red-700">
+              {t.mustDo}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </GuideSection>
+) : (
+  <GuideSection title={t.status}>
+    <div className="rounded-3xl bg-slate-50 p-5">
+      <p className="text-lg font-black text-slate-950">
+        {
+          {
+            en: "This item is not recyclable. Please dispose of it directly in the general waste bin.",
+            zhCN: "此物品不可回收，建议直接放入一般垃圾箱中。",
+            zhHK: "此物品不可回收，建議直接放入一般垃圾箱中。"
+          }[lang]
+        }
+      </p>
+    </div>
+  </GuideSection>
+)}
 
         <GuideSection title={`❌ ${t.wrongMethods}`} tone="danger">
           <div className="grid gap-3">{detail.wrong.map((wrong, index) => <div key={index} className="rounded-2xl bg-red-50 p-4 text-red-700"><strong>{wrong[lang]}</strong></div>)}</div>
