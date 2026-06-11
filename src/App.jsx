@@ -13,6 +13,7 @@ const ui = {
     guide: "Guide",
     recycling: "Recycling points",
     game: "Game",
+    businessNav: "For Business",
     badge: "Public education website for RTE packaging sustainability",
     heroTitle: "Make RTE packaging easier to understand, separate and recycle.",
     heroText: "A practical guide for identifying ready-to-eat food packaging in Hong Kong, checking material composition, and learning how to handle each item before disposal.",
@@ -20,7 +21,7 @@ const ui = {
     gameBtn: "Go to learning game",
     categoryTitle: "Choose a packaging category",
     categoryText: "Start from the type of item you are holding, then open the detailed guide for that packaging.",
-    viewItems: "View items",
+    viewItems: "Click to View Packaging items",
     backHome: "Back to categories",
     backCategory: "Back to item list",
     search: "Search packaging items...",
@@ -67,12 +68,30 @@ const ui = {
     aboutTitle: "About this capstone project",
     aboutText: "PackitWise RTE is a capstone project developed by students from the MSc Environmental Management programme at The University of Hong Kong. Through this website and the learning game, we aim to improve public understanding of ready-to-eat food packaging in Hong Kong, including common materials, recycling challenges and better disposal practices.",
     noResults: "No matching items found.",
+    symbolsTitle: "Understand Common Recycling Symbols First",
+    symbolsText: "Before checking each packaging item, you can first learn the common recycling symbols that may appear on ready-to-eat food packaging in Hong Kong.",
+    symbolsImageAlt: "Common recycling symbols for ready-to-eat food packaging in Hong Kong",
+    symbolsSourceNote: "Reference information from:",
+    instagramTitle: "Follow us on Instagram",
+    instagramText: "Stay connected with our project updates, recycling tips and educational posts on RTE food packaging in Hong Kong.",
+    instagramButton: "Open Instagram",
+    businessTitle: "Recommendations for Businesses",
+    businessText: "Based on our project findings, we propose a phased approach for convenience stores and RTE food packaging businesses. The recommendations move from short-term consumer guidance and pilot recycling support, to mid-term packaging design improvements, and finally to longer-term collaboration across the packaging and recycling system.",
+    businessShortTitle: "Short-term: Start with a small-scale pilot",
+    businessShortText: "In the short term, businesses can reduce consumer confusion by testing simple recycling support in selected stores. This may include choosing one or two high-volume RTE products, setting up dedicated recycling bins, and using clear bilingual labels or posters to explain how trays, lids, films and sleeves should be handled. QR codes can also guide consumers to nearby recycling points. By reviewing participation rates, contamination levels, consumer understanding and staff feedback, businesses can decide whether the pilot is practical enough to expand.",
+    businessMidTitle: "Mid-term: Improve packaging design and recyclability",
+    businessMidText: "In the mid term, businesses can improve the packaging itself so that it is easier for consumers and recyclers to handle. This includes promoting design for disassembly, using removable labels or wash-off adhesives, and reducing the use of difficult-to-recycle plastics such as PVC. These changes can improve recyclability, respond to consumer expectations for more sustainable packaging, and reduce possible future regulatory or supply chain risks.",
+    businessLongTitle: "Long-term: Build a more systematic packaging transition",
+    businessLongText: "In the long term, businesses should move beyond individual material changes and work towards a more systematic transition. Where suitable, mono-material packaging, fully paper-based packaging, and bio-based or edible coatings could be explored. More importantly, businesses should work with local recyclers and packaging suppliers to ensure that new packaging designs are not only safe and commercially practical, but also compatible with Hong Kong’s recycling system.",
+    businessOverallTitle: "Overall direction",
+    businessOverallText: "Overall, we recommend a step-by-step approach. Short-term actions can focus on store-level pilots and consumer education; mid-term actions can improve labels, adhesives and material choices; and long-term actions should involve closer collaboration among retailers, packaging suppliers, recyclers and government. This allows businesses to improve packaging sustainability gradually while balancing cost, feasibility and the current limitations of Hong Kong’s recycling infrastructure.",
   },
   zhCN: {
     subtitle: "香港即食包装回收指南",
     guide: "包装指南",
     recycling: "回收点",
     game: "小游戏",
+    businessNav: "企业建议",
     badge: "面向公众的即食包装可持续性教育网站",
     heroTitle: "让即食包装更容易被理解、分类和回收。",
     heroText: "一个面向香港消费者的实用指南，帮助用户识别即食食品包装、查看材料组成，并学习每种包装在丢弃前应该如何处理。",
@@ -80,7 +99,7 @@ const ui = {
     gameBtn: "前往小游戏",
     categoryTitle: "选择包装类别",
     categoryText: "先根据手上的包装类型选择大类，再进入具体包装的详细指南。",
-    viewItems: "查看项目",
+    viewItems: "点击查看具体包装",
     backHome: "返回类别",
     backCategory: "返回项目列表",
     search: "搜索包装项目……",
@@ -90,8 +109,6 @@ const ui = {
     recyclable: "可回收",
     general: "一般垃圾",
     convenience: "回收便利程度",
-    imagePlaceholder: "图片占位",
-    imageHint: "之后可以替换成你们实地观察拍摄的包装照片。",
     summary: "快速总结",
     materialBreakdown: "材料组成与拆解",
     cleaningMethod: "清洁方法",
@@ -125,12 +142,30 @@ const ui = {
     aboutTitle: "关于本 Capstone 项目",
     aboutText: "PackitWise RTE 是由香港大学 MSc Environmental Management 课程学生开发的 Capstone 项目。我们希望通过这个网站和互动小游戏，提升公众对香港即食食品包装的认知，包括常见包装材料、回收难点以及更合适的处理方式。",
     noResults: "没有找到匹配的包装项目。",
+    symbolsTitle: "先了解常见回收标识",
+    symbolsText: "在查看不同即食食品包装前，可先了解香港即食食品包装上可能出现的常见回收标识。",
+    symbolsImageAlt: "香港即食食品包装常见回收标识",
+    symbolsSourceNote: "图片根据以下参考资料：",
+    instagramTitle: "关注我们的 Instagram",
+    instagramText: "获取更多关于香港即食食品包装回收的项目更新、回收小贴士和教育内容。",
+    instagramButton: "打开 Instagram",
+    businessTitle: "给企业的建议",
+    businessText: "根据本项目的研究结果，我们建议便利店及即食食品包装相关企业采用分阶段方式改善包装回收。建议从短期的消费者指引和门店试点开始，逐步延伸至中期的包装设计改良，并在长期推动包装供应商、零售商和回收系统之间的合作。",
+    businessShortTitle: "短期：先从小规模试点开始",
+    businessShortText: "短期阶段的重点是降低消费者在回收即食食品包装时的混淆。企业可以先选择一至两类销量较高、包装结构相对清晰的产品，在部分门店设置专门的回收桶，并配合简单的双语标签和海报，说明托盘、盖子、薄膜和纸套等不同组件应如何处理。QR code 也可以用来显示附近回收点的位置、开放时间和可接受材料。通过参与率、污染程度、消费者理解程度和员工反馈，企业可以判断该模式是否适合进一步扩大。",
+    businessMidTitle: "中期：改善包装设计，提高可回收性",
+    businessMidText: "中期阶段可以从包装结构本身入手，减少消费者和回收商的处理难度。例如，企业可以推动易拆解设计，让消费者更容易分离不同包装组件；使用可撕除标签或可水洗胶黏剂，减少标签和胶水对回收过程的污染；同时逐步减少较难回收的塑料材料，例如 PVC。这些改变不仅可以提升包装的可回收性，也有助于回应消费者对可持续包装的期待，并降低未来可能出现的监管和供应链风险。",
+    businessLongTitle: "长期：推动更系统的包装转型",
+    businessLongText: "长期阶段的重点是建立更完整的可持续包装体系，而不只是改变单一包装材料。企业可以在合适的产品上推广单一材料包装，减少复合材料带来的回收困难；也可以探索以全纸质包装、生物基涂层或可食用涂层改善部分即食食品包装。更重要的是，企业需要与本地回收商和包装供应商合作，确保新包装既符合食品安全和商业需求，也能够被现有回收系统真正接收和处理。",
+    businessOverallTitle: "整体方向",
+    businessOverallText: "整体而言，我们建议企业采用循序渐进的方式改善即食食品包装回收。短期先通过门店试点和消费者教育减少错误弃置；中期改进包装标签、胶黏剂和材料选择，提高包装本身的可回收性；长期则需要与包装供应商、回收商、零售商和政府等持份者合作，建立更稳定的回收闭环。这样可以让企业在控制成本和操作难度的同时，逐步提升包装可持续性。",
   },
   zhHK: {
     subtitle: "香港即食食品包裝回收指南",
     guide: "包裝指南",
     recycling: "回收點",
     game: "小遊戲",
+    businessNav: "企業建議",
     badge: "面向公眾的即食食品包裝可持續教育網站",
     heroTitle: "令即食食品包裝更易理解、分類及回收。",
     heroText: "一個面向香港消費者的實用指南，協助用戶識別即食食品包裝、查看材料組成，並學習每種包裝在丟棄前應如何處理。",
@@ -138,7 +173,7 @@ const ui = {
     gameBtn: "前往小遊戲",
     categoryTitle: "選擇包裝類別",
     categoryText: "先根據手上的包裝類型選擇大類，再進入具體包裝的詳細指南。",
-    viewItems: "查看項目",
+    viewItems: "點擊查看具體包裝",
     backHome: "返回類別",
     backCategory: "返回項目列表",
     search: "搜尋包裝項目……",
@@ -148,8 +183,6 @@ const ui = {
     recyclable: "可回收",
     general: "一般垃圾",
     convenience: "回收便利程度",
-    imagePlaceholder: "圖片佔位",
-    imageHint: "之後可以替換成你們實地觀察拍攝的包裝照片。",
     summary: "快速總結",
     materialBreakdown: "材料組成與拆解",
     cleaningMethod: "清潔方法",
@@ -183,6 +216,23 @@ const ui = {
     aboutTitle: "關於本 Capstone 項目",
     aboutText: "PackitWise RTE 是由香港大學 MSc Environmental Management 課程學生開發的 Capstone 項目。我們希望透過這個網站和互動小遊戲，提升公眾對香港即食食品包裝的認知，包括常見包裝材料、回收難點以及更合適的處理方式。",
     noResults: "沒有找到匹配的包裝項目。",
+    symbolsTitle: "先了解常見回收標識",
+    symbolsText: "在查看不同即食食品包裝前，可先了解香港即食食品包裝上可能出現的常見回收標識。",
+    symbolsImageAlt: "香港即食食品包裝常見回收標識",
+    symbolsSourceNote: "圖片根據以下參考資料：",
+    instagramTitle: "關注我們的 Instagram",
+    instagramText: "獲取更多關於香港即食食品包裝回收的項目更新、回收小貼士及教育內容。",
+    instagramButton: "打開 Instagram",
+    businessTitle: "給企業的建議",
+    businessText: "根據本項目的研究結果，我們建議便利店及即食食品包裝相關企業採用分階段方式改善包裝回收。建議從短期的消費者指引和門店試點開始，逐步延伸至中期的包裝設計改良，並在長期推動包裝供應商、零售商和回收系統之間的合作。",
+    businessShortTitle: "短期：先從小規模試點開始",
+    businessShortText: "短期階段的重點是減少消費者在回收即食食品包裝時的混淆。企業可以先選擇一至兩類銷量較高、包裝結構相對清晰的產品，在部分門店設置專門的回收桶，並配合簡單的雙語標籤和海報，說明托盤、蓋子、薄膜和紙套等不同組件應如何處理。QR code 也可以用來顯示附近回收點的位置、開放時間和可接受物料。透過參與率、污染程度、消費者理解程度和員工回饋，企業可以判斷該模式是否適合進一步擴展。",
+    businessMidTitle: "中期：改善包裝設計，提高可回收性",
+    businessMidText: "中期階段可以從包裝結構本身入手，減少消費者和回收商的處理難度。例如，企業可以推動易拆解設計，讓消費者更容易分離不同包裝組件；使用可撕除標籤或可水洗膠黏劑，減少標籤和膠水對回收過程的污染；同時逐步減少較難回收的塑膠物料，例如 PVC。這些改變不僅可以提升包裝的可回收性，也有助於回應消費者對可持續包裝的期待，並降低未來可能出現的監管和供應鏈風險。",
+    businessLongTitle: "長期：推動更系統性的包裝轉型",
+    businessLongText: "長期階段的重點是建立更完整的可持續包裝體系，而不只是改變單一包裝物料。企業可以在合適的產品上推廣單一物料包裝，減少複合材料帶來的回收困難；也可以探索以全紙質包裝、生物基塗層或可食用塗層改善部分即食食品包裝。更重要的是，企業需要與本地回收商和包裝供應商合作，確保新包裝既符合食品安全和商業需求，也能夠被現有回收系統真正接收和處理。",
+    businessOverallTitle: "整體方向",
+    businessOverallText: "整體而言，我們建議企業採用循序漸進的方式改善即食食品包裝回收。短期先透過門店試點和消費者教育減少錯誤棄置；中期改進包裝標籤、膠黏劑和物料選擇，提高包裝本身的可回收性；長期則需要與包裝供應商、回收商、零售商和政府等持份者合作，建立更穩定的回收閉環。這樣可以讓企業在控制成本和操作難度的同時，逐步提升包裝可持續性。",
   },
 };
 
@@ -381,8 +431,42 @@ const itemData = [
   }
 ];
 
+//回收标识介绍
+const recyclingSymbolImages = {
+  en: "/images/recycling-symbols-en.png",
+  zhCN: "/images/recycling-symbols-zhcn.png",
+  zhHK: "/images/recycling-symbols-zhhk.png",
+};
+
+const recyclingSymbolSources = [
+  {
+    label: "Centre for Food Safety",
+    url: "https://www.cfs.gov.hk/english/multimedia/multimedia_pub/files/Know_More_about_the_Plastic_Food_Packaging_and_Containers.pdf",
+  },
+  {
+    label: "UPrinting",
+    url: "https://www.uprinting.com/blog/plastic-recyling-symbols/",
+  },
+  {
+    label: "Greenpeace Hong Kong",
+    url: "https://www.greenpeace.org/hongkong/issues/plastics/update/10446/2019%E6%9C%80%E6%96%B0%E5%A1%91%E8%86%A0%E5%9B%9E%E6%94%B6%E6%94%BB%E7%95%A5/",
+  },
+];
+
+//Business Section
+const businessApproachImages = {
+  short: "/images/business-short-term.jpg",
+  mid: "/images/business-mid-term.jpg",
+  long: "/images/business-long-term.jpg",
+};
+
 //引导绿在区区网站
 const officialGreenDirectoryUrl = "https://www.wastereduction.gov.hk/en-hk/recycling-map";
+
+//Instagram链接
+const instagramHandle = "@PackitWise_RTE";
+const instagramUrl = "https://www.instagram.com/packitwise_rte/";
+
 
 //回收点示例
 const recyclingPoints = [
@@ -506,6 +590,7 @@ function TopNav({ lang, setLang, t, setPage }) {
             <a href="#guide" className="hover:text-emerald-700">{t.guide}</a>
             <a href="#recycling" className="hover:text-emerald-700">{t.recycling}</a>
             <a href="#game" className="hover:text-emerald-700">{t.game}</a>
+            <a href="#business" className="hover:text-emerald-700">{t.businessNav}</a>
           </div>
           <div className="flex rounded-2xl border border-slate-200 bg-white p-1 shadow-sm">
             {LANGS.map((option) => <button key={option.code} onClick={() => setLang(option.code)} className={`rounded-xl px-3 py-2 text-sm font-bold transition ${lang === option.code ? "bg-emerald-700 text-white" : "text-slate-600 hover:bg-slate-50"}`}>{option.label}</button>)}
@@ -513,6 +598,44 @@ function TopNav({ lang, setLang, t, setPage }) {
         </div>
       </nav>
     </header>
+  );
+}
+
+//回收信息组件
+function RecyclingSymbolsSection({ lang, t }) {
+  return (
+    <section className="px-5 py-12">
+      <div className="mx-auto max-w-7xl">
+        <SectionTitle title={t.symbolsTitle}>
+          {t.symbolsText}
+        </SectionTitle>
+
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-slate-200 bg-white p-5 shadow-sm md:p-8">
+          <img
+            src={recyclingSymbolImages[lang]}
+            alt={t.symbolsImageAlt}
+            className="w-full rounded-[1.75rem] border border-slate-100 object-contain"
+          />
+
+          <p className="mt-4 text-xs leading-6 text-slate-500">
+            {t.symbolsSourceNote}{" "}
+            {recyclingSymbolSources.map((source, index) => (
+              <React.Fragment key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
+                >
+                  {source.label}
+                </a>
+                {index < recyclingSymbolSources.length - 1 ? "; " : "."}
+              </React.Fragment>
+            ))}
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -541,6 +664,8 @@ function HomePage({ lang, t, openCategory }) {
           </div>
         </div>
       </section>
+
+      <RecyclingSymbolsSection lang={lang} t={t} />
 
       <section id="guide" className="px-5 py-16">
         <SectionTitle title={t.categoryTitle}>{t.categoryText}</SectionTitle>
@@ -632,6 +757,78 @@ function RecyclingSection({ lang, t }) {
 
 function InfoBlock({ label, value }) {
   return <div className="rounded-2xl bg-slate-50 p-4"><p className="font-bold text-slate-950">{label}</p><p className="mt-1 leading-6 text-slate-700">{value}</p></div>;
+}
+
+//Business Section
+function BusinessRecommendationSection({ t }) {
+  const approaches = [
+    {
+      key: "short",
+      image: businessApproachImages.short,
+      title: t.businessShortTitle,
+      text: t.businessShortText,
+      alt: "Short-term approach for RTE packaging recycling",
+    },
+    {
+      key: "mid",
+      image: businessApproachImages.mid,
+      title: t.businessMidTitle,
+      text: t.businessMidText,
+      alt: "Mid-term recommendations for RTE packaging design",
+    },
+    {
+      key: "long",
+      image: businessApproachImages.long,
+      title: t.businessLongTitle,
+      text: t.businessLongText,
+      alt: "Long-term recommendations for RTE packaging transition",
+    },
+  ];
+
+  return (
+    <section id="business" className="px-5 py-16">
+      <div className="mx-auto max-w-7xl">
+        <SectionTitle title={t.businessTitle}>
+          {t.businessText}
+        </SectionTitle>
+
+        <div className="space-y-10">
+          {approaches.map((approach) => (
+            <div
+              key={approach.key}
+              className="rounded-[2.5rem] border border-slate-200 bg-white p-5 shadow-sm md:p-8"
+            >
+              <img
+                src={approach.image}
+                alt={approach.alt}
+                className="w-full rounded-[1.75rem] border border-slate-100 object-contain"
+              />
+
+              <div className="mt-6 rounded-[2rem] bg-slate-50 p-6">
+                <h3 className="text-2xl font-black text-slate-950">
+                  {approach.title}
+                </h3>
+
+                <p className="mt-3 text-base leading-8 text-slate-600">
+                  {approach.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-[2rem] border border-emerald-200 bg-emerald-50 p-6">
+          <h3 className="text-2xl font-black text-emerald-950">
+            {t.businessOverallTitle}
+          </h3>
+
+          <p className="mt-3 text-base leading-8 text-emerald-900">
+            {t.businessOverallText}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 //Game Section
@@ -810,7 +1007,52 @@ export default function PackitWiseRTEWebsite() {
       {page === "detail" && <DetailPage lang={lang} t={t} item={selectedItem} goCategory={() => setPage("category")} />}
       <RecyclingSection lang={lang} t={t} />
       <GameSection t={t} />
-      <section className="px-5 py-16"><div className="mx-auto max-w-7xl rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm md:p-10"><h2 className="text-3xl font-black text-slate-950">{t.aboutTitle}</h2><p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">{t.aboutText}</p></div></section>
+      <BusinessRecommendationSection t={t} />
+      <section className="px-5 py-16">
+  <div className="mx-auto max-w-7xl rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+    <h2 className="text-3xl font-black text-slate-950">{t.aboutTitle}</h2>
+
+    <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
+      {t.aboutText}
+    </p>
+
+    <div className="mt-8 border-t border-slate-200 pt-6">
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-700">
+        Instagram
+      </p>
+
+      <h3 className="mt-2 text-2xl font-black text-slate-950">
+        {t.instagramFollow}
+      </h3>
+
+      <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">
+        {t.instagramText}
+      </p>
+
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <p className="text-lg font-black text-emerald-700">
+          {instagramHandle}
+        </p>
+
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => {
+            window.gtag?.("event", "instagram_link_click", {
+              event_category: "engagement",
+              event_label: "about_section_instagram_button",
+              source_section: "about_section",
+            });
+          }}
+          className="inline-flex w-fit rounded-2xl bg-emerald-700 px-5 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-800"
+        >
+          {t.instagramButton} ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
       <footer className="border-t border-slate-200 px-5 py-8"><div className="mx-auto max-w-7xl text-sm text-slate-500">© PackitWise RTE Capstone Project</div></footer>
     </main>
   );
