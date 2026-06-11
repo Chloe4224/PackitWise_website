@@ -11,6 +11,7 @@ const ui = {
   en: {
     subtitle: "Hong Kong RTE packaging guide",
     guide: "Guide",
+    symbolsNav: "Recycling Symbols",
     recycling: "Recycling points",
     game: "Game",
     businessNav: "For Business",
@@ -89,6 +90,7 @@ const ui = {
   zhCN: {
     subtitle: "香港即食包装回收指南",
     guide: "包装指南",
+    symbolsNav: "回收标识",
     recycling: "回收点",
     game: "小游戏",
     businessNav: "企业建议",
@@ -163,6 +165,7 @@ const ui = {
   zhHK: {
     subtitle: "香港即食食品包裝回收指南",
     guide: "包裝指南",
+    symbolsNav: "回收標識",
     recycling: "回收點",
     game: "小遊戲",
     businessNav: "企業建議",
@@ -588,6 +591,7 @@ function TopNav({ lang, setLang, t, setPage }) {
         <div className="flex flex-wrap items-center gap-3 md:justify-end">
           <div className="hidden items-center gap-5 text-sm font-semibold text-slate-700 lg:flex">
             <a href="#guide" className="hover:text-emerald-700">{t.guide}</a>
+            <a href="#symbols" className="hover:text-emerald-700">{t.symbolsNav}</a>
             <a href="#recycling" className="hover:text-emerald-700">{t.recycling}</a>
             <a href="#game" className="hover:text-emerald-700">{t.game}</a>
             <a href="#business" className="hover:text-emerald-700">{t.businessNav}</a>
@@ -604,7 +608,7 @@ function TopNav({ lang, setLang, t, setPage }) {
 //回收信息组件
 function RecyclingSymbolsSection({ lang, t }) {
   return (
-    <section className="px-5 py-12">
+    <section id="symbols" className="px-5 py-12">
       <div className="mx-auto max-w-7xl">
         <SectionTitle title={t.symbolsTitle}>
           {t.symbolsText}
