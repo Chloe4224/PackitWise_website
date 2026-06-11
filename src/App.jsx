@@ -525,7 +525,7 @@ function getDetail(item, lang) {
       : { en: "In everyday practice, this item is usually treated as general waste because of contamination, small size or mixed materials.", zhCN: "在日常情况下，这类包装通常因污染、体积小或混合材料而作为一般垃圾处理。", zhHK: "在日常情況下，這類包裝通常因污染、體積小或混合材料而作一般垃圾處理。" }[lang],
     cleaning: reusable
       ? { en: "Empty all remaining food or liquid, rinse lightly with water, and keep the item dry before recycling.", zhCN: "先清空剩余食物或液体，用清水简单冲洗，并在回收前尽量保持干燥。", zhHK: "先清空剩餘食物或液體，用清水簡單沖洗，並在回收前盡量保持乾爽。" }[lang]
-      : { en: "Remove obvious food residue where possible. If the item cannot be cleaned or separated, do not mix it with clean recyclables.", zhCN: "可行时先去除明显食物残留；如果无法清洁或分离，不要混入干净可回收物。", zhHK: "可行時先去除明顯食物殘留；如無法清潔或分離，不要混入乾淨可回收物。" }[lang],
+      : { en: "Remove obvious food residue where possible. If the item cannot be cleaned or separated, do not mix it with clean recyclables.", zhCN: "可行情況下先去除明显食物残留；如果无法清洁或分离，不要混入干净可回收物。", zhHK: "可行情況下先去除明顯食物殘留；如無法清潔或分離，不要混入乾淨可回收物。" }[lang],
     value: reusable
       ? { en: "Medium to high. Value depends on cleanliness, material type and whether the collection point accepts it.", zhCN: "中至高。价值取决于清洁程度、材料类型和回收点是否接收。", zhHK: "中至高。價值取決於清潔程度、材料類型及回收點是否接收。" }[lang]
       : { en: "Low. The item is difficult to sort or process in normal recycling streams.", zhCN: "低。这类物品在普通回收流程中较难分拣或处理。", zhHK: "低。這類物品在普通回收流程中較難分揀或處理。" }[lang],
@@ -537,7 +537,7 @@ function getDetail(item, lang) {
       materials: [
         { part: { en: "Bottle body", zhCN: "瓶身", zhHK: "樽身" }, material: "PET", recyclable: true, note: { en: "Main recyclable component", zhCN: "主要可回收部件", zhHK: "主要可回收部件" } },
         { part: { en: "Cap", zhCN: "瓶盖", zhHK: "樽蓋" }, material: "PP / HDPE", recyclable: true, note: { en: "Keep or separate depending on local instructions", zhCN: "按回收点要求保留或分开", zhHK: "按回收點要求保留或分開" } },
-        { part: { en: "Label sleeve", zhCN: "标签膜", zhHK: "標籤膜" }, material: { en: "Plastic film", zhCN: "塑料薄膜", zhHK: "塑料薄膜" }, recyclable: false, note: { en: "Remove if possible", zhCN: "可行时撕除", zhHK: "可行時撕除" } },
+        { part: { en: "Label sleeve", zhCN: "标签膜", zhHK: "標籤膜" }, material: { en: "Plastic film", zhCN: "塑料薄膜", zhHK: "塑料薄膜" }, recyclable: false, note: { en: "Remove if possible", zhCN: "可行情況下撕除", zhHK: "可行情況下撕除" } },
       ],
       wrong: [
         { en: "Leaving liquid inside", zhCN: "瓶内残留饮料", zhHK: "樽內殘留飲品" },
@@ -562,7 +562,7 @@ function getDetail(item, lang) {
       materials: [
         { part: { en: "Base tray", zhCN: "盒身", zhHK: "盒身" }, material: { en: "PP / PET / paper-based material", zhCN: "PP / PET / 纸基材料", zhHK: "PP / PET / 紙基材料" }, recyclable: false, note: { en: "Check material and contamination first", zhCN: "需先判断材质和污染情况", zhHK: "需先判斷材質及污染情況" } },
         { part: { en: "Lid", zhCN: "盒盖", zhHK: "盒蓋" }, material: { en: "Different plastic or film", zhCN: "不同塑料或封膜", zhHK: "不同塑料或封膜" }, recyclable: false, note: { en: "Mixed materials reduce recyclability", zhCN: "混合材质降低回收性", zhHK: "混合材質降低回收性" } },
-        { part: { en: "Sticker / label", zhCN: "贴纸 / 标签", zhHK: "貼紙 / 標籤" }, material: { en: "Paper + adhesive", zhCN: "纸 + 胶", zhHK: "紙 + 膠" }, recyclable: false, note: { en: "Remove where possible", zhCN: "可行时移除", zhHK: "可行時移除" } },
+        { part: { en: "Sticker / label", zhCN: "贴纸 / 标签", zhHK: "貼紙 / 標籤" }, material: { en: "Paper + adhesive", zhCN: "纸 + 胶", zhHK: "紙 + 膠" }, recyclable: false, note: { en: "Remove where possible", zhCN: "可行情況下移除", zhHK: "可行情況下移除" } },
       ],
       wrong: [
         { en: "Recycling the whole box without checking material", zhCN: "不检查材质就整盒回收", zhHK: "不檢查材質就整盒回收" },
@@ -578,7 +578,7 @@ function getDetail(item, lang) {
     ...generic,
     materials: d?.materials || [
       { part: { en: "Main packaging body", zhCN: "主要包装主体", zhHK: "主要包裝主體" }, material: categoryMeta[item.category].name[lang], recyclable: reusable, note: item.explanation },
-      { part: { en: "Attached label / film", zhCN: "附着标签 / 薄膜", zhHK: "附着標籤 / 薄膜" }, material: { en: "Mixed or small accessory", zhCN: "混合或小型配件", zhHK: "混合或小型配件" }, recyclable: false, note: { en: "Remove if possible", zhCN: "可行时移除", zhHK: "可行時移除" } },
+      { part: { en: "Attached label / film", zhCN: "附着标签 / 薄膜", zhHK: "附着標籤 / 薄膜" }, material: { en: "Mixed or small accessory", zhCN: "混合或小型配件", zhHK: "混合或小型配件" }, recyclable: false, note: { en: "Remove if possible", zhCN: "可行情況下移除", zhHK: "可行情況下移除" } },
     ],
     wrong: d?.wrong || [
       { en: "Putting dirty packaging into clean recycling bins", zhCN: "把脏包装放入干净回收箱", zhHK: "把污糟包裝放入乾淨回收箱" },
