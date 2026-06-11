@@ -826,8 +826,6 @@ function DetailPage({ lang, t, item, goCategory }) {
   </>
 )}
 
-        <GuideSection title={t.cleaningMethod}><p className="text-lg leading-8 text-slate-600">{detail.cleaning}</p></GuideSection>
-
         {isRecyclable ? (
   <GuideSection title={t.recyclingSteps}>
     <div className="space-y-4">
