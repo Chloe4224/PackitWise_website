@@ -76,6 +76,8 @@ const ui = {
     instagramTitle: "Follow us on Instagram",
     instagramText: "Stay connected with our project updates, recycling tips and educational posts on RTE food packaging in Hong Kong.",
     instagramButton: "Open Instagram",
+    referenceTitle: "References",
+    referenceSourceNote: "Reference information from:",
     businessTitle: "Recommendations for Businesses",
     businessText: "Based on our project findings, we propose a phased approach for convenience stores and RTE food packaging businesses. The recommendations move from short-term consumer guidance and pilot recycling support, to mid-term packaging design improvements, and finally to longer-term collaboration across the packaging and recycling system.",
     businessShortTitle: "Short-term: Start with a small-scale pilot",
@@ -151,6 +153,8 @@ const ui = {
     instagramTitle: "关注我们的 Instagram",
     instagramText: "获取更多关于香港即食食品包装回收的项目更新、回收小贴士和教育内容。",
     instagramButton: "打开 Instagram",
+    referenceTitle: "参考资料",
+    referenceSourceNote: "本网站参考资料：",
     businessTitle: "给企业的建议",
     businessText: "根据本项目的研究结果，我们建议便利店及即食食品包装相关企业采用分阶段方式改善包装回收。建议从短期的消费者指引和门店试点开始，逐步延伸至中期的包装设计改良，并在长期推动包装供应商、零售商和回收系统之间的合作。",
     businessShortTitle: "短期：先从小规模试点开始",
@@ -226,6 +230,8 @@ const ui = {
     instagramTitle: "關注我們的 Instagram",
     instagramText: "獲取更多關於香港即食食品包裝回收的項目更新、回收小貼士及教育內容。",
     instagramButton: "打開 Instagram",
+    referenceTitle: "參考資料",
+    referenceSourceNote: "本網站參考資料：",
     businessTitle: "給企業的建議",
     businessText: "根據本項目的研究結果，我們建議便利店及即食食品包裝相關企業採用分階段方式改善包裝回收。建議從短期的消費者指引和門店試點開始，逐步延伸至中期的包裝設計改良，並在長期推動包裝供應商、零售商和回收系統之間的合作。",
     businessShortTitle: "短期：先從小規模試點開始",
@@ -493,6 +499,26 @@ const officialGreenDirectoryUrl = "https://www.wastereduction.gov.hk/en-hk/recyc
 //Instagram链接
 const instagramHandle = "@PackitWise_RTE";
 const instagramUrl = "https://www.instagram.com/packitwise_rte/";
+
+//网页ref链接
+const websiteReferences = [
+  {
+    label: "GovHK - Waste Reduction and Recycling",
+    url: "https://www.gov.hk/en/residents/environment/waste/reduction/wasteredrecyc.htm",
+  },
+  {
+    label: "Practical Guides on Packaging Reduction and Management - Food Manufacturing Sector",
+    url: "https://www.wastereduction.gov.hk/sites/default/files/resources_centre/Practical_Guides_on_Packaging_Reduction_And_Management-Food_Manufacturing_Sector_ENG.pdf",
+  },
+  {
+    label: "GREEN@COMMUNITY FAQ",
+    url: "https://www.wastereduction.gov.hk/en-hk/recycling-faq/greencommunity-faq",
+  },
+  {
+    label: "GREEN@COMMUNITY Programme",
+    url: "https://www.wastereduction.gov.hk/en-hk/waste-reduction-programme/green-at-community",
+  },
+];
 
 
 //回收点示例
@@ -1148,7 +1174,7 @@ export default function PackitWiseRTEWebsite() {
       </p>
 
       <h3 className="mt-2 text-2xl font-black text-slate-950">
-        {t.instagramFollow}
+        {t.instagramTitle}
       </h3>
 
       <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">
@@ -1176,6 +1202,29 @@ export default function PackitWiseRTEWebsite() {
           {t.instagramButton} ↗
         </a>
       </div>
+    </div>
+
+    <div className="mt-8 border-t border-slate-200 pt-6">
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-700">
+        {t.referenceTitle}
+      </p>
+
+      <p className="mt-3 text-xs leading-6 text-slate-500">
+        {t.referenceSourceNote}{" "}
+        {websiteReferences.map((source, index) => (
+          <React.Fragment key={source.url}>
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
+            >
+              {source.label}
+            </a>
+            {index < websiteReferences.length - 1 ? "; " : "."}
+          </React.Fragment>
+        ))}
+      </p>
     </div>
   </div>
 </section>
